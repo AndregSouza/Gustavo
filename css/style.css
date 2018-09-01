@@ -1,0 +1,177 @@
+/* Style for our header texts
+* --------------------------------------- */
+h2{
+  font-size: 5em;
+  font-family: 'Montserrat';
+  font-weight: normal;
+  color: #fff;
+  margin:0;
+  padding:0;
+}
+
+h3{
+  font-size: 1.8em;
+  font-family: 'Montserrat';
+  font-weight: normal;
+  color: #fff;
+  margin:0;
+  padding:0;
+}
+
+p{
+  font-size: 1.3em;
+  font-family: 'Montserrat';
+  font-weight: lighter;
+  color: #fff;
+  margin:0;
+  padding:0;
+}
+
+/* Centered texts in each section
+* --------------------------------------- */
+.section{
+  text-align:center;
+  overflow: hidden;
+  background-color: black;
+}
+
+.video_main{
+  margin-top: 18%;
+  position: relative;
+  float: left;
+  width: 768px;
+  height: 432px;
+}
+
+.video_main iframe{
+  width: 100%;
+  max-width: 896px;
+  max-height: 504px;
+  height: 100%;
+
+}
+
+.video_info{
+  margin-top: 18%;
+  width: 500px;
+  height: 300px;
+  position: relative;
+  float: right;
+}
+
+.sobre_info{
+  margin-top: 18%;
+  width: 700px;
+  height: 504px;
+  position: relative;
+  float: right;
+}
+
+.foto_info{
+  margin-top: 18%;
+  width: 480px;
+  height: 320px;
+  position: relative;
+  float: left;
+}
+
+.container{
+  max-width: 1340px;
+  margin: auto;
+}
+
+/* Fixed header and footer.
+* --------------------------------------- */
+#header{
+  position:fixed;
+  height: 150px;
+  display:block;
+  width: 100%;
+  z-index:9;
+  text-align:center;
+  color: #f2f2f2;
+  padding: 20px 0 0 0;
+  top:0px;
+}
+
+.menu p{
+  font-size: 3em;
+  font-family: 'Montserrat';
+  font-weight: bold;
+  color: #fff;
+  display: inline-block;
+  margin-top: 45px;
+  margin-left: 15%;
+  float: left;
+  padding:0;
+}
+
+.menu h3{
+  font-size: 1.5em;
+  font-family: 'Montserrat';
+  font-weight: bold;
+  color: #fff;
+  display: inline-block;
+  margin-top: 60px;
+  float: left;
+  padding:0;
+}
+
+.menu ul{
+  margin-right: 15%;
+}
+
+.menu li{
+  display: inline-block;
+  float: right;
+  margin-left: 6%;
+}
+
+body{
+  background-color: #0c0c0c;
+}
+
+#myVideo{
+  opacity: 0.4;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top:0;
+  right:0;
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+  background-color: black; /* in case the video doesn't fit the whole page*/
+  background-position: center center;
+  background-size: contain;
+  object-fit: cover; /*cover video background */
+  z-index:3;
+}
+
+/* Layer with position absolute in order to have it over the video
+* --------------------------------------- */
+#section .layer{
+  position: absolute;
+  z-index: 4;
+  width: 100%;
+  left: 0;
+  top: 43%;
+
+
+  -webkit-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+/*solves problem with overflowing video in Mac with Chrome */
+#section{
+  overflow: hidden;
+}
+
+#infoMenu li a {
+  color: #fff;
+}
+
+video::-webkit-media-controls {
+  display:none !important;
+}
